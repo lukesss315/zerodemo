@@ -1,0 +1,11 @@
+Name: add.rpc
+ListenOn: 0.0.0.0:8080
+Etcd:
+  Hosts:
+  - 127.0.0.1:2379
+  Key: add.rpc
+DataSource: root:12345678@tcp(localhost:3306)/gozero
+# mysql链接地址，满足 $user:$password@tcp($ip:$port)/$db?$queries 格式即可
+Table: book
+Cache:
+  - Host: localhost:6379
